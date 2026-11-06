@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proctor Telemetry Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div>
+            <h1>Proctor Telemetry Dashboard</h1>
+            <p>Real-Time Candidate Monitoring System</p>
+        </div>
+        <div class="connection">
+            <span id="connectionDot"></span>
+            <span id="connectionStatus">Connecting...</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Events</h3>
+                <p id="totalEvents">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Warnings</h3>
+                <p id="warningCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Critical Alerts</h3>
+                <p id="criticalCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Normal Events</h3>
+                <p id="normalCount">0</p>
+            </div>
+        </section>
+
+        <section class="session-info">
+            <h2>Monitoring Information</h2>
+            <p><strong>Candidate ID:</strong> <span id="candidateId">Waiting for data</span></p>
+            <p><strong>Session ID:</strong> <span id="sessionId">Waiting for data</span></p>
+        </section>
+
+        <section class="alerts-section">
+            <div class="section-heading">
+                <h2>Live Telemetry Alerts</h2>
+                <span class="live-label">LIVE</span>
+            </div>
+
+            <div id="alertsContainer">
+                <p class="empty-message">Waiting for Firebase telemetry events...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Day 28 - Frontend Telemetry Display | Firebase Firestore</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
